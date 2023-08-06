@@ -12,30 +12,33 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
+.navOnScroll {
+  background: rgba(222, 216, 255, 0.3098039216);
   top: 0;
   left: 0;
   position: fixed;
   width: 100%;
   padding: 16px 50px;
   z-index: 100;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
-header nav {
+.navOnScroll nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav .logo {
+.navOnScroll nav .logo {
   font-size: 1.75em;
   text-decoration: none;
   font-weight: 700;
   font-family: "Nitti", sans-serif;
   color: #544b3d;
 }
-header nav .logo span {
+.navOnScroll nav .logo span {
   color: #f15025;
 }
-header nav .list {
+.navOnScroll nav .list {
   font-size: 1rem;
   font-weight: 400;
   display: flex;
@@ -43,18 +46,75 @@ header nav .list {
   gap: 3em;
   list-style: none;
 }
-header nav .list li {
+.navOnScroll nav .list li {
   padding: 2.5px 5px;
   border-radius: 0.25em;
+  transition: 0.2s;
 }
-header nav .list li a {
+.navOnScroll nav .list li .nav_link {
   text-decoration: none;
   color: #544b3d;
 }
-header nav .list li:hover {
+.navOnScroll nav .list li .active {
+  color: #fd4715;
+}
+.navOnScroll nav .list li:hover {
   background-color: #ffffff;
 }
 
+
+.split1 {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: 600px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.split1 h3 {
+  font-weight: 200;
+  font-size: 1em;
+  letter-spacing: 5px;
+}
+.split1 h2 {
+  font-weight: 700;
+  font-size: 3em;
+}
+.split1 p {
+  height: 6em;
+  width: auto;
+  line-height: 1.6em;
+}
+
+span {
+  color: #f15025;
+}
+
+.split2 {
+  position: absolute;
+  bottom: 0;
+  right: 3em;
+  max-height: 95vh;
+}
+.split2 img {
+  height: 550px;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.circle1 {
+  opacity: 0.3;
+  position: absolute;
+  bottom: -4em;
+  right: 0;
+  width: 50vw;
+  height: 25vw;
+  border-top-right-radius: 25vw;
+  border-top-left-radius: 12.5vw;
+  background-color: #544b3d;
+}
 
 #About {
   background: #ded8ff;
@@ -63,6 +123,7 @@ header nav .list li:hover {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 50px;
 }
 
@@ -71,4 +132,207 @@ header nav .list li:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .main {
+    width: 100%;
+    height: 100%;
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+}
+.main {
+  width: 100%;
+  height: 100%;
+  padding-inline: 50px;
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+.main .text {
+  margin-top: 2em;
+  width: 100%;
+}
+.main .text h2 {
+  font-weight: 700;
+  font-size: 3em;
+  text-transform: capitalize;
+}
+.main .udl {
+  display: inline-block;
+  position: relative;
+}
+.main .udl::after {
+  content: "";
+  visibility: hidden;
+  width: 15em;
+  opacity: 0.9;
+  height: 3px;
+  border-radius: 2em;
+  background-image: linear-gradient(90deg, black, black, #f15025);
+  border-radius: 2em;
+  display: block;
+}
+@media (min-width: 500px) {
+  .main .grid1 {
+    margin-block-start: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-template-areas: "a b c";
+    gap: 5em;
+  }
+  .main .grid1 .card:nth-child(1) {
+    grid-area: a;
+  }
+  .main .grid1 .card:nth-child(2) {
+    grid-area: b;
+  }
+  .main .grid1 .card:nth-child(3) {
+    grid-area: c;
+  }
+}
+
+.grid1 {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2em;
+  grid-template-areas: "a" "b" "c";
+}
+.grid1 .card {
+  border-radius: 0.25em;
+  max-width: 22em;
+  height: 15em;
+  background-color: #837fa0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.95);
+}
+.grid1 .card:nth-child(1) {
+  grid-area: a;
+}
+.grid1 .card:nth-child(2) {
+  grid-area: b;
+}
+.grid1 .card:nth-child(3) {
+  grid-area: c;
+}
+.grid1 .card .icon i {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+.grid1 .card .innerCard {
+  height: 100%;
+  padding: 2em;
+  color: #181512;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.grid1 .card .innerCard h3 {
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+.grid1 .card .innerCard p {
+  transition: all 0.3s ease-in-out;
+}
+.grid1 .card:hover {
+  background-color: #aea9da;
+  transform: translateY(20px);
+  box-shadow: 0 3em 2em -1.5em rgba(59, 53, 43, 0.7803921569);
+  cursor: pointer;
+}
+.grid1 .card:hover .innerCard h3 {
+  font-size: 1.75em;
+  letter-spacing: 2px;
+  margin-bottom: 0.75em;
+}
+.grid1 .card:hover .icon i {
+  transform: scaleX(1.2);
+}
+
+#Projects {
+  background: #9e99be;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-inline: 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+
+.cardcontainer {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 2em;
+  margin-block-start: 4em;
+}
+
+.text {
+  margin-top: 2em;
+  width: 100%;
+}
+.text h2 {
+  font-weight: 700;
+  font-size: 3em;
+  text-transform: capitalize;
+}
+
+.cardImg {
+  cursor: pointer;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25em;
+  opacity: 0.9;
+}
+.cardImg .bgimg {
+  background-image: url(/img/girl.jpg);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.cardImg .bgimg .holder {
+  padding: 1.25em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #756bb6;
+  opacity: 0.5;
+  transition: all 0.29s ease-in-out;
+  transform: translateX(100%) scaleY(0.8);
+  border-radius: inherit;
+}
+
+.cardImg:hover .bgimg {
+  transform: scale(1.1);
+  height: 200%;
+  width: 220%;
+}
+.cardImg:hover .holder {
+  transform: translateX(0%) scaleY(1);
+  -webkit-backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
 }/*# sourceMappingURL=index.css.map */

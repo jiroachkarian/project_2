@@ -9,36 +9,193 @@
     <link href="https://fonts.cdnfonts.com/css/b612-mono" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/nitti" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/league-mono" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/b2be4a8a2d.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Navbar of the page in a header -->
-    <header>
+    <header class="navOnScroll nav">
       <nav>
         <a href="#" class="logo">This<span>█Portfolio</span> </a>
         <div class="toggleMenu"></div>
 
         <ul class="list">
-          <li><a href="#About">About</a></li>
-          <li><a href="#Experience">Experience</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a class="nav_link" href="#About">About</a></li>
+          <li><a class="nav_link" href="#Experience">Experience</a></li>
+          <li><a class="nav_link" href="#Projects">Projects</a></li>
+          <li><a class="nav_link" href="#Contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- SECTION 1 -->
+    <!-- START -->
     <section id="About">
+      <div class="circle1"></div>
+
       <div class="split1">
         <h3>Greetings</h3>
-        <h2>I'm Jiraer Achkarian</h2>
-        <p></p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-        facere, deleniti illum autem, repellat voluptatibus maxime quam voluptas
-        vitae recusandae ea asperiores deserunt soluta doloremque nemo tempore
-        pariatur minima eius!
+        <h2>I'm <span>Sulek Jackson</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          facere, deleniti illum autem, repellat voluptatibus maxime quam
+          voluptas vitae recusandae ea asperiores deserunt soluta doloremque
+          nemo tempore pariatur minima eius!
+        </p>
+      </div>
+      <div class="split2">
+        <img src="img/man-bg.png" alt="" />
       </div>
     </section>
-    <section id="Experience"></section>
-    <section id="Projects"></section>
+    <!-- SECTION 1 -->
+    <!-- END -->
+
+    <!-- SECTION 2 -->
+    <!-- START -->
+    <section id="Experience">
+      <div class="main">
+        <div class="text udl">
+          <h2>what i <span>do</span></h2>
+        </div>
+        <div class="grid1">
+          <div class="card">
+            <div class="innerCard">
+              <div class="icon">
+                <i class="fa-solid fa-code fa-2xl"></i>
+              </div>
+              <div class="content">
+                <h3>WebDev</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, laboriosam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="innerCard">
+              <div class="icon">
+                <i class="fa-solid fa-code fa-2xl"></i>
+              </div>
+              <div class="content">
+                <h3>WebDev</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, laboriosam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="innerCard">
+              <div class="icon">
+                <i class="fa-solid fa-code fa-2xl"></i>
+              </div>
+              <div class="content">
+                <h3>WebDev</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, laboriosam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 2 -->
+    <!-- END -->
+
+    <section id="Projects">
+      <div class="container">
+      <div class="text">
+        <h2>my <span>projects</span></h2>
+      </div>
+
+      <div class="cardcontainer">
+      <div class="cardImg">
+        <div class="bgimg"><div class="holder"></div></div>
+      </div>
+      <div class="cardImg">
+        <div class="bgimg"><div class="holder"></div></div>
+      </div>
+      <div class="cardImg">
+        <div class="bgimg"><div class="holder"></div></div>
+      </div>
+
+      </div>
+
+      </div>
+    </section>
+      <!-------------- CARD WITH BG IMAGE-------------->
+      <!--
+      <div class="card2">
+        <div class="bg-img-nature">
+          <img src="/design/img/card2.jpg" alt="" />
+        </div>
+        <div class="holder">
+          <div class="holder-in">
+            <h2>City Picture</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+
+            -->
+    </section>
     <section id="Contact"></section>
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CSSRulePlugin.min.js"
+      integrity="sha512-+35N1KBHwTDnFOBSqO2nm/qsf5okaS74sUZu/rT/wlvuAfJ1hrAoGlWZip2l1LHB1q2i8B2k84Pb/NrC38bv8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+      integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="gsap.js"></script>
+    <!--Active Links-->
+    <script>
+      // JavaScript code to handle the click event and scroll to the target ID
+      const links = document.querySelectorAll(".nav_link");
+
+      if (links.length) {
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+              // Remove "active" class from all links
+              links.forEach((link) => {
+                link.classList.remove("active");
+              });
+
+              // Add "active" class to the clicked link
+              link.classList.add("active");
+
+              // Scroll to the target section
+              targetSection.scrollIntoView({
+                behavior: "smooth", // You can change this to "auto" for instant scrolling
+                block: "start", // You can use "center" or "end" for different alignment
+              });
+            }
+          });
+        });
+      }
+    </script>
   </body>
 </html>
