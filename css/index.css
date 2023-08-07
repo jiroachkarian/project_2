@@ -259,11 +259,9 @@ span {
   width: 100%;
   height: 100%;
   position: relative;
-  padding-inline: 50px;
 }
 
 .container {
-  display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -272,6 +270,7 @@ span {
   justify-content: center;
   padding-top: 7em;
   padding-bottom: 7em;
+  padding-inline: 50px;
 }
 
 .cardcontainer {
@@ -304,9 +303,9 @@ span {
   border-radius: 0.25em;
   opacity: 0.9;
 }
-.cardImg .bgimg {
-  background-image: url(/img/girl.jpg);
+.cardImg .bgimg1 {
   position: relative;
+  background-image: url(/img/girl.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -314,25 +313,132 @@ span {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
-.cardImg .bgimg .holder {
+.cardImg .bgimg2 {
+  position: relative;
+  background-position: center;
+  background-image: url(/img/salon.jpg);
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.cardImg .bgimg3 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/brave_OIIZRW5bo7.png);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.cardImg .holder {
   padding: 1.25em;
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #756bb6;
-  opacity: 0.5;
-  transition: all 0.29s ease-in-out;
+  background-color: rgba(117, 107, 182, 0.2862745098);
+  transition: all 0.3s ease-in-out;
   transform: translateX(100%) scaleY(0.8);
   border-radius: inherit;
 }
+.cardImg .holder .holder-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-block: 2em;
+  padding-inline-start: 2em;
+  padding-inline-end: 3em;
+  color: white;
+  justify-content: space-between;
+}
+.cardImg .holder .holder-text .text-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.cardImg .holder .holder-text .text-title h3 {
+  font-size: 1.75em;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 5px;
+  font-family: "nitti";
+  font-weight: 600;
+}
+.cardImg .holder .holder-text .text-title p {
+  transition: all 0.3s ease-in-out;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 200;
+}
 
-.cardImg:hover .bgimg {
+/*------------------ Button in general -------------------------*/
+button {
+  background-color: #110d2c;
+  width: 10em;
+  height: 3em;
+  border-radius: 0.25em;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #5f5a83;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+button a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  font-size: 1em;
+}
+
+button:hover {
+  border-color: #110d2c;
+}
+button:hover a {
+  color: #000000;
+  letter-spacing: 1.5px;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+button::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  background-color: #f15025;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+}
+
+button:hover:before {
+  transition: all 0.2s ease-in-out;
+  top: 0;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+  z-index: -1;
+}
+
+.cardImg:hover .bgimg1,
+.cardImg:hover .bgimg2,
+.cardImg:hover .bgimg3 {
   transform: scale(1.1);
   height: 200%;
   width: 220%;
 }
 .cardImg:hover .holder {
   transform: translateX(0%) scaleY(1);
-  -webkit-backdrop-filter: blur(0.5px);
-          backdrop-filter: blur(0.5px);
+  width: 350px;
+  height: 350px;
+}
+
+#Contact {
+  background: #9e99be;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }/*# sourceMappingURL=index.css.map */
